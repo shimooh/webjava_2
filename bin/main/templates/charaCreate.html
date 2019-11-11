@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Character Create</title>
+</head>
+<body>
+  <form th:action="@{/charaCreate}" method="POST" th:object="${charaCreateForm}">
+    <p>キャラ作成<br>
+      <p>職業:
+        <input type="radio" name="job" value="Warrior" checked>戦士
+        <input type="radio" name="job" value="Magic_caster">魔法使い
+      </p>
+    </p>
+
+    <p>名前:
+      <input type="text" name="name" size="10" value="エラー君">
+    </p>
+
+    <p><input type="submit" value="次へ"></p>
+  </form>
+</body>
+</html>
